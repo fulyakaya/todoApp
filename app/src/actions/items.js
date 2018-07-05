@@ -1,12 +1,13 @@
 export function getToDoList() {
   return {
-    type: "GET_TODO_LIST",
+    type: "GET_TODO_LIST"
   };
 }
 
 export function addItemToDoList(item) {
+  const addItem = { name: item, id: Math.floor(Math.random() * 101) };
   return {
-    type: "addItemToDoList",
-    payload: item,
+    type: "ADD_ITEM_TO_LIST",
+    payload: addItem
   };
 }

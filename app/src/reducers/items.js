@@ -8,6 +8,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
       };
+    case "ADD_ITEM_TO_LIST":
+      return {
+        ...state,
+        todoList: [...state.todoList, action.payload]
+        
+      };
     default:
       return state;
   }
